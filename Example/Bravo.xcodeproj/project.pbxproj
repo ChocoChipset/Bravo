@@ -24,6 +24,8 @@
 		3A288FCD182060B2005FF8DA /* DeathThrow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A288FCA182060B2005FF8DA /* DeathThrow.jpg */; };
 		3A288FCE182060B2005FF8DA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3A288FCB182060B2005FF8DA /* README.md */; };
 		3A288FCF182060B2005FF8DA /* USA-Mexico.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A288FCC182060B2005FF8DA /* USA-Mexico.jpg */; };
+		3A288FD3182063A5005FF8DA /* BRavoExifManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A288FD2182063A5005FF8DA /* BRavoExifManager.m */; };
+		3A288FD4182063A5005FF8DA /* BRavoExifManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A288FD2182063A5005FF8DA /* BRavoExifManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +61,8 @@
 		3A288FCA182060B2005FF8DA /* DeathThrow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathThrow.jpg; sourceTree = "<group>"; };
 		3A288FCB182060B2005FF8DA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		3A288FCC182060B2005FF8DA /* USA-Mexico.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "USA-Mexico.jpg"; sourceTree = "<group>"; };
+		3A288FD1182063A5005FF8DA /* BRavoExifManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BRavoExifManager.h; path = ../../Source/BRavoExifManager.h; sourceTree = "<group>"; };
+		3A288FD2182063A5005FF8DA /* BRavoExifManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BRavoExifManager.m; path = ../../Source/BRavoExifManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 		3A288F9718205947005FF8DA /* Bravo */ = {
 			isa = PBXGroup;
 			children = (
+				3A288FD0182062F5005FF8DA /* Source */,
 				3A288FA018205947005FF8DA /* BRAppDelegate.h */,
 				3A288FA118205947005FF8DA /* BRAppDelegate.m */,
 				3A288FA318205947005FF8DA /* Main_iPhone.storyboard */,
@@ -169,6 +174,15 @@
 			name = ExampleImages;
 			path = Bravo/ExampleImages;
 			sourceTree = SOURCE_ROOT;
+		};
+		3A288FD0182062F5005FF8DA /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3A288FD1182063A5005FF8DA /* BRavoExifManager.h */,
+				3A288FD2182063A5005FF8DA /* BRavoExifManager.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
@@ -273,6 +287,7 @@
 			files = (
 				3A288FAB18205947005FF8DA /* BRViewController.m in Sources */,
 				3A288FA218205947005FF8DA /* BRAppDelegate.m in Sources */,
+				3A288FD3182063A5005FF8DA /* BRavoExifManager.m in Sources */,
 				3A288F9E18205947005FF8DA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +296,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A288FD4182063A5005FF8DA /* BRavoExifManager.m in Sources */,
 				3A288FC018205948005FF8DA /* BravoTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
