@@ -21,6 +21,9 @@
 		3A288FB618205948005FF8DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A288F9518205947005FF8DA /* UIKit.framework */; };
 		3A288FBE18205948005FF8DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A288FBC18205948005FF8DA /* InfoPlist.strings */; };
 		3A288FC018205948005FF8DA /* BravoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A288FBF18205948005FF8DA /* BravoTests.m */; };
+		3A288FCD182060B2005FF8DA /* DeathThrow.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A288FCA182060B2005FF8DA /* DeathThrow.jpg */; };
+		3A288FCE182060B2005FF8DA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3A288FCB182060B2005FF8DA /* README.md */; };
+		3A288FCF182060B2005FF8DA /* USA-Mexico.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3A288FCC182060B2005FF8DA /* USA-Mexico.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		3A288FBB18205948005FF8DA /* BravoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BravoTests-Info.plist"; sourceTree = "<group>"; };
 		3A288FBD18205948005FF8DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A288FBF18205948005FF8DA /* BravoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BravoTests.m; sourceTree = "<group>"; };
+		3A288FCA182060B2005FF8DA /* DeathThrow.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = DeathThrow.jpg; sourceTree = "<group>"; };
+		3A288FCB182060B2005FF8DA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		3A288FCC182060B2005FF8DA /* USA-Mexico.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "USA-Mexico.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,7 @@
 		3A288FB918205948005FF8DA /* BravoTests */ = {
 			isa = PBXGroup;
 			children = (
+				3A288FC9182060B2005FF8DA /* ExampleImages */,
 				3A288FBF18205948005FF8DA /* BravoTests.m */,
 				3A288FBA18205948005FF8DA /* Supporting Files */,
 			);
@@ -151,6 +158,17 @@
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
+		};
+		3A288FC9182060B2005FF8DA /* ExampleImages */ = {
+			isa = PBXGroup;
+			children = (
+				3A288FCB182060B2005FF8DA /* README.md */,
+				3A288FCA182060B2005FF8DA /* DeathThrow.jpg */,
+				3A288FCC182060B2005FF8DA /* USA-Mexico.jpg */,
+			);
+			name = ExampleImages;
+			path = Bravo/ExampleImages;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -239,7 +257,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A288FCF182060B2005FF8DA /* USA-Mexico.jpg in Resources */,
+				3A288FCE182060B2005FF8DA /* README.md in Resources */,
 				3A288FBE18205948005FF8DA /* InfoPlist.strings in Resources */,
+				3A288FCD182060B2005FF8DA /* DeathThrow.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
