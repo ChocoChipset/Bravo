@@ -10,6 +10,6 @@
 
 @interface BRavoExifManager : NSObject
 
-- (NSDictionary *)exifPropertiesOfJPEGData:(NSData *)paramData;
+- (NSDictionary *)metadataOfJPEGData:(NSData *)paramData;
 
 @end

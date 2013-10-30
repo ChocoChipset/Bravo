@@ -12,7 +12,7 @@
 
 @implementation BRavoExifManager
 
-- (NSDictionary *)exifPropertiesOfJPEGData:(NSData *)paramJPEGData
+- (NSDictionary *)metadataOfJPEGData:(NSData *)paramJPEGData
 {
     if (paramJPEGData.length == 0)
     {
@@ -34,9 +34,28 @@
         
         if (metadataReference)
         {
-            result = [NSDictionary dictionaryWithDictionary:(__bridge NSDictionary *)metadataReference];
+            NSDictionary *jpegMetadata = [NSDictionary dictionaryWithDictionary:(__bridge NSDictionary *)metadataReference];
             
             CFRelease(metadataReference);
+            
+            NSMutableDictionary *oneLevelDictionary = [NSMutableDictionary dictionary];
+            
+            for (id key in [jpegMetadata allKeys])
+            {
+                id objectForKey = jpegMetadata[key];
+                
+                if ([objectForKey isKindOfClass:[NSDictionary class]])
+                {
+                    [oneLevelDictionary addEntriesFromDictionary:objectForKey];
+                }
+                else
+                {
+                    [oneLevelDictionary setObject:objectForKey
+                                           forKey:key];
+                }
+            }
+            
+            result = [NSDictionary dictionaryWithDictionary:oneLevelDictionary];
         }
         
     }
