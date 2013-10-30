@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Hector Zarate. All rights reserved.
 //
 
+#import "BRavoExifManager.h"
 #import <XCTest/XCTest.h>
 
 @interface BravoTests : XCTestCase
@@ -28,7 +29,16 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    NSBundle *bundle = [NSBundle bundleForClass:[self class]];
+    NSString *imagePath = [bundle pathForResource:@"DeathThrow" ofType:@"jpg"];
+    
+    NSData *imageData = [NSData dataWithContentsOfFile:imagePath];
+    BRavoExifManager *bravo = [[BRavoExifManager alloc] init];
+    
+    NSDictionary *exifProperties = [bravo metadataOfJPEGData:imageData];
+    
+    NSLog(@"%@", exifProperties);
+    
 }
 
 @end
