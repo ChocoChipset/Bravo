@@ -37,10 +37,21 @@
 @end
 
 
+static BRavoExifManager *static_exifManager = nil;
 
 @implementation BRavoExifManager
 
-- (NSDictionary *)metadataOfJPEGData:(NSData *)paramJPEGData
++ (instancetype)sharedManager
+{
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        static_exifManager = [[BRavoExifManager alloc] init];
+    });
+    
+    return static_exifManager;
+}
+
+- (NSDictionary *)extractMetadataFromJPEG:(NSData *)paramJPEGData
 {
     if (paramJPEGData.length == 0)
     {
