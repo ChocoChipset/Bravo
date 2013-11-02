@@ -27,18 +27,21 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testExtractMetadataFromJPG
 {
     NSBundle *bundle = [NSBundle bundleForClass:[self class]];
     NSString *imagePath = [bundle pathForResource:@"DeathThrow" ofType:@"jpg"];
     
+    NSUInteger numberOfExpectedMetadataProperties = 58;
+    
+    
     NSData *imageData = [NSData dataWithContentsOfFile:imagePath];
-    BRavoExifManager *bravo = [[BRavoExifManager alloc] init];
     
-    NSDictionary *exifProperties = [bravo metadataOfJPEGData:imageData];
+    NSDictionary *exifProperties = [[BRavoExifManager sharedManager] extractMetadataFromJPEG:imageData];
     
-    NSLog(@"%@", exifProperties);
-    
+    XCTAssertEqual(exifProperties.count,
+                   numberOfExpectedMetadataProperties,
+                   @"The number of metadata properties extracted is different from the expected result");
 }
 
 @end
