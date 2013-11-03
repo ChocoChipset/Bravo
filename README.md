@@ -1,7 +1,8 @@
 Bravo
 =====
 
-Bravo is an Objective-C library to simplify the extraction of metadata from JPEG files. It gathers Exif, IPTC, JFIF and TIFF properties and places it into a single ```NSDictionary``` object.
+Bravo is an Objective-C library to simplify the extraction of metadata from JPEG files. 
+It gathers Exif, IPTC, JFIF and TIFF properties and places them into a single ```NSDictionary``` object.
 
 
 Usage
@@ -10,9 +11,9 @@ Usage
 1. Add the files under the ```/Source``` directory to your target.
 2. To retrieve the metadata of an image, extract said image to a ```NSData``` object and use the method ```-extractMetadataFromJPEG:``` on it:
 
-```obj-c
-NSDictionary *metadataProperties = [[BRavoExifManager sharedManager] extractMetadataFromJPEG:imageData];
-```
+    ```obj-c
+    NSDictionary *metadataProperties = [[BRavoExifManager sharedManager] extractMetadataFromJPEG:imageData];
+    ```
 
 3. Discover the plethora of information that can be retrieved from a single JPEG file.
 
