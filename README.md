@@ -8,7 +8,7 @@ It gathers Exif, IPTC, JFIF and TIFF properties and places them into a single ``
 Usage
 -----
 
-1. [Install using Cocoapods](http://cocoadocs.org/docsets/Bravo/) or by adding the files under the ```/Source``` directory to your target.
+1. [Install using CocoaPods](http://cocoadocs.org/docsets/Bravo/) or by adding the files under the ```/Source``` directory to your target.
 
 2. To retrieve the metadata of an image, extract said image to a ```NSData``` object and use the method ```-extractMetadataFromJPEG:``` on it:
 
